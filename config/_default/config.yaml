@@ -1,12 +1,17 @@
 theme: "starter-hugo-academic"
+
 # Configuration of Hugo
 # Guide: https://wowchemy.com/docs/getting-started/
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Academic # Website name
-baseurl: 'https://academic-demo.netlify.app/' # Website URL
-copyright: '' # Footer text, e.g. '© {year} Me'
+
+title: Thought Splinters # Website name
+baseurl: 'https://thought-splinters.netlify.app/' # Website URL
+copyright: 'CC BY-SA 4.0 (Peter Baumgartner, 2017-2022)' # Footer text, e.g. '© {year} Me'
+# title: "Thought splinters"
+# baseurl: 'https://notes.peter-baumgartner.net/'
+
 
 ############################
 ## LANGUAGE
@@ -18,6 +23,82 @@ defaultContentLanguageInSubdir: false
 removePathAccents: true
 
 ############################
+## ADVANCED
+############################
+
+enableGitInfo: false
+summaryLength: 30
+paginate: 30
+enableEmoji: true
+enableRobotsTXT: true
+footnotereturnlinkcontents: <sup>^</sup>
+ignoreFiles:
+  - \.ipynb$
+  - .ipynb_checkpoints$
+  - \.Rmd$
+  - \.Rmarkdown$
+  - _cache$
+  - \.knit\.md$
+  - \.utf8\.md$
+googleAnalytics: "UA-106194253-6"
+permalinks:
+  authors: /author/:slug/
+  categories: /category/:slug/
+  tags: /tag/:slug/
+  post: /:year/:month/:day/:slug
+disableAliases: true # WHAT ???
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+    - WebAppManifest
+    - headers
+    - redirects
+  section:
+    - HTML
+    - RSS
+imaging:
+  anchor: smart
+  quality: 75
+  resampleFilter: lanczos
+timeout: 600000 # previously: 1000000
+taxonomies:
+  author: authors
+  category: categories
+  tag: tags
+
+#########################
+## OLD MARKUP CODE
+#########################
+# markup:
+#   defaultMarkdownHandler: goldmark
+#   goldmark:
+#     renderer:
+#       unsafe: yes
+#   highlight:
+#     codeFences: no
+#   tableOfContents:
+#     endLevel: 3
+#     startLevel: 2
+
+markup:
+  _merge: deep
+related:
+  threshold: 80
+  includeNewer: true
+  toLower: true
+  indices:
+    - name: title
+      weight: 60
+    - name: summary
+      weight: 50
+    - name: tags
+      weight: 80
+    - name: categories
+      weight: 70
+
+############################
 ## MODULES
 ############################
 
@@ -26,47 +107,5 @@ module:
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5
 
-############################
-## ADVANCED
-############################
-
-enableGitInfo: false
-summaryLength: 30
-paginate: 10
-enableEmoji: true
-enableRobotsTXT: true
-footnotereturnlinkcontents: <sup>^</sup>
-ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
-permalinks:
-  event: '/talk/:slug/'
-  authors: '/author/:slug/'
-  tags: '/tag/:slug/'
-  categories: '/category/:slug/'
-  publication_types: '/publication-type/:slug/'
-disableAliases: true
-outputs:
-  home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
-  section: [HTML, RSS]
-imaging:
-  resampleFilter: lanczos
-  quality: 75
-  anchor: smart
-timeout: 600000
-taxonomies:
-  tag: tags
-  category: categories
-  publication_type: publication_types
-  author: authors
-markup:
-  _merge: deep
-related:
-  threshold: 80
-  includeNewer: true
-  toLower: true
-  indices:
-    - name: tags
-      weight: 100
-    - name: categories
-      weight: 70
 security:
   _merge: deep
