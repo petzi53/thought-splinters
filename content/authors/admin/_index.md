@@ -29,7 +29,7 @@ organizations:
 social:
 - icon: envelope
   icon_pack: fas
-  link: /about#contact
+  link: /contact
 - display:
     header: true
   icon: twitter
@@ -38,7 +38,7 @@ social:
   link: https://twitter.com/pbaumgartner
 - icon: github
   icon_pack: fab
-  link: https://github.com/petzi53/blog-hugo
+  link: https://github.com/petzi53/blogdown
   label: "Edit/Fork me"
   display:
     header: true
