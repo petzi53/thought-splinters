@@ -1,0 +1,63 @@
+---
+title: "Using Emojis in R and R Markdown"
+author: "Peter Baumgartner"
+date: '2021-04-19'
+slug: using-emojis-in-r-and-rmarkdown
+categories:
+- Rmarkdown
+- package
+tags:
+- emo
+- emoji
+- unicode
+lastmod: null
+summary: 'Recently I worked on some pull requests for [interactive tutorials](https://github.com/OpenIntroStat/ims-tutorials) for the  OpenIntro textbook Introduction to Modern Statistics. There I came across the [package `emo`](https://github.com/hadley/emo). Its purpose is: "Easily insert emoji into R and R Markdown". This post describes some learnings on how to use this package.'
+commentable: true
+draft: no
+side_toc: no
+image:
+  placement: 2    
+  caption: ""
+  alt_text: ""
+  focal_point: "Center"
+  preview_only: false
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(fontawesome)
+```
+
+Recently I worked on some pull requests for [interactive tutorials](https://github.com/OpenIntroStat/ims-tutorials) for the OpenIntro textbook Introduction to Modern Statistics. There I came across the [package `emo`](https://github.com/hadley/emo). Its purpose is: "Easily insert emoji into `r fa(name = "r-project", fill = "steelblue")` and RMarkdown".
+
+I was surprised that there is a special package. I didn't think that including emojis wouldn't be a problem -- at least on the macOS. I only have to open the window for emojis and symbols (CMD-SHIFT-SPACE) and double click on the icon to insert it into the markdown document. No big deal, so what's the matter?
+
+![Screenshot of macOS window showing a selection of emojis](images/macOs-emojis-min.png)
+
+After I searched online, I saw that there many questions (and [solutions](https://stackoverflow.com/questions/52378661/how-to-display-emojis-in-ggplot2-using-emo-package-in-r)) about this problem. There is on CRAN a special [package `emojifont`](https://cran.r-project.org/web/packages/emojifont/index.html) for using emojis and [Font Awesome](https://fontawesome.com/) in base R and `ggplot2` graphics and with [`emoGG`](https://github.com/dill/emoGG) another one on GitHub.
+
+For me, it is still not clear what exactly the problem is. Perhaps it has to do with different operating systems? Does the Unicode not translate to all systems?
+
+Anyway, I looked into `emo,` and it turned out that it offers some useful functions when working with strings containing emojis. You can also add emojis to summarize p-values. Additionally, I learned several things:
+
+1.  With `emojis_df <- emo::jis`, you get a data frame with `r nrow(emo::jis)` emoticons categorized by `r ncol(emo::jis)` variables.
+
+2.  In `emojis_df`, you will find the keywords for each emoji. But this is problematic as they are not unique. In the [ReadMe of `emo` in GitHub](https://github.com/hadley/emo#keywords), you will see a massive list of multiple references for each keyword.
+
+3.  If you are using keywords, the command `emo::ji(<keyword>)` will randomly pick one.
+
+```{r emoji-random, results='hold', eval=FALSE}
+emo::ji("face")
+emo::ji("face")
+emo::ji("face")
+
+```
+
+    ## 😈
+    ## 💆 
+    ## 👼 
+
+To identify, you have to use the short name of the [Common Local Data Repository](http://cldr.unicode.org/) (CDLR) included in the `emojis_df`. If you want to use emojis with a particular skin tone, you have to use the alias name as the CDLR name produces an error. Instead of looking up an emoji within the above-created data frame `emojis_df`, I found it more practicable to search in the official [Unicode Emoji List](https://www.unicode.org/emoji/charts/emoji-list.html). It has not so many different columns but focuses on icon display and CLDR short name.
+
+```{=html}
+<span class='Z3988' title='url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=blogPost&amp;rft.title=Using%20Emojis%20in%20R%20and%20R%20Markdown&amp;rft.source=Thought%20splinters&amp;rft.rights=CC%20BY-SA%204.0&amp;rft.description=Recently%20I%20worked%20on%20some%20pull%20requests%20for%20[interactive%20tutorials](https://github.com/OpenIntroStat/ims-tutorials)%20for%20the%20%20OpenIntro%20textbook%20Introduction%20to%20Modern%20Statistics.%20There%20I%20came%20across%20the%20[package%20%60emo%60](https://github.com/hadley/emo).%20Its%20purpose%20is:%20%22Easily%20insert%20emoji%20into%20R%20and%20R%20Markdown%22.%20This%20post%20describes%20some%20learnings%20on%20how%20to%20use%20this%20package.&amp;rft.identifier=https%3A%2F%2Fnotes.peter-baumgartner.net%2Fpost%2F2021%2F2021-04-19-using-emojis-in-r-and-rmarkdown.en%2Fusing-emojis-in-r-and-rmarkdown&amp;rft.aufirst=Peter&amp;rft.aulast=Baumgartner&amp;rft.au=Peter%20Baumgartner&amp;rft.date=2021-04-19&amp;rft.language=en'></span> 
+```
