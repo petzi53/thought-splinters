@@ -13,7 +13,7 @@ summary: 'I was pleased finally to see a
 new R introduction especially directed at social scientists. The book title "Introduction to R for Social Scientists: A Tidy
 Programming Approach" (abbreviated I2RSS) was promising for me for two
 reasons. Read the full book review.'
-authors: [Peter Baumgartner]
+authors: []
 lastmod: '2022-04-02'
 bibliography:
   - ../../../../static/media/references.bib

@@ -1,0 +1,114 @@
+---
+title: Updating the Blogdown Infrastructure
+author: Peter Baumgartner
+date: '2022-04-04'
+slug: updating-the-blogdown-infrastructure
+categories:
+  - blogdown
+  - how-to
+tags:
+  - infrastructure
+  - installation
+  - Hugo
+  - Wowchemy
+subtitle: ''
+summary: 'The article describes my experiences with updating the blogdown infrastructure (Hugo and Wowchemy website builder, previously called Academic). I outline two different methods: Building a new blogdown website from scratch and using the Wowchemy update recommendation. The second procedure is much easier but only works starting from Wowchemy version 5.1.0. onwards.'
+authors: []
+lastmod: ''
+bibliography:
+  - ../../../../static/media/references.bib
+featured: no
+commentable: yes
+side_toc: yes
+draft: no
+image:
+  placement: 2    
+  caption: "[Different phases in the process of publishing blogdown websites. Image by ALison Hill: Up & running with blogdown in 2021](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/)"
+  alt_text: "Pictograms of the different phases in the process of publishing blogdown websites."
+  focal_point: "Center"
+  preview_only: false
+---
+
+## Introduction
+
+After six months of interruption, I wrote the day before yesterday a new blog post. I noticed that my blogdown infrastructure was outdated during this occasion. My Hugo static site generator had version 0.82.0 (current is 0.96.0), and my Wowchemy website builder was version 5.1.0 (current is 5.4.5).
+
+Frankly speaking, updating the blogdown machinery was always a horror trip for me. The past three times, I always destroyed the working of my website, and it took me several days to restore a functioning weblog. My blogdown framework was not so much out of date to force an update. Therefore, I thought it would be an excellent possibility to try and learn this always painfully process.
+
+## Building blogdown website from scratch
+
+After Internet recherche, I came across the [blog article by Solomon Kurz](https://solomonkurz.netlify.app/post/2021-05-03-blogdown-updates-prompted-a-website-overhaul-these-are-my-notes/). It is shorter because it concentrates to the essential steps for people with some R experience as the well-known article by [Alison Hill](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/).
+
+After many painful and often failed trials, I was intrigued by Kurz’s idea to start the weblog from scratch. It has the great advantage that the new version will work from the beginning. I could check after each change to see if it continues to work. If not, then the last modification is to blame.
+
+But there is also a disadvantage: I have to create a new repository for each update and lose my followers and stars for my up-to-date weblog.
+
+I followed [Kurz’s tutorial](https://solomonkurz.netlify.app/post/2021-05-03-blogdown-updates-prompted-a-website-overhaul-these-are-my-notes/) in many details with two important exceptions:
+
+1.  Instead of creating files and writing the necessary code, I compared and copied from my old weblog. Checking the two blogs to each other was a tedious task, especially with the different config files and settings. But it worked!
+
+2.  At first, I tried to commit all my content files at once to GitHub. But this failed as the operation stuck and never finished. It turned out that the transfer has some size limit. I didn’t know the limit, so I portioned my commits in small packages (1-2 MB) to Git and immediately pushed the files to GitHub. But this workaround threatened to become a nightmare as it would take several hours to copy all my content of 248MB (many images!) to the new repo. Luckily I found another solution with the help of an [answer in StackOverflow](https://stackoverflow.com/a/64565533/7322615).
+
+`git config http.postBuffer 2147483648`
+
+I wrote the above terminal command inside the terminal pane of the RStudio project of my new blog[^1]. It allows the Git software to use the maximum buffer to transfer content up to 2 GB in one step.
+
+## Install from the Wowchemy module
+
+The above method worked, and I believe it is a secure path to updating the blogdown machinery. But still, it took me one and a half-day. So I tried with a copy of my old – not updated – weblog, another option described in the official [update note](https://wowchemy.com/docs/hugo-tutorials/update/#tldr) on the Wowchemy website.[^2] — The [more detailed update version](https://wowchemy.com/docs/hugo-tutorials/update/#update-wowchemy) did not work for me! I failed already in the beginning with the terminal command `hugo mod get -u`.
+
+1.  Head over to `themes/github.com/wowchemy/wowchemy-Hugo-modules/wowchemy/go.mod`.
+2.  Update the require statement to only the following, replacing v5.1.0 or later with any version from v5.1.0 onwards. For instance:
+
+<!-- -->
+
+    require github.com/wowchemy/wowchemy-Hugo-modules/v5 v5.4.0
+
+3.  Update the module paths in `config/_default/config.yaml` to the following if they are not already:
+
+<!-- -->
+
+    module:
+      imports:
+        - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5
+        - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5
+
+4.  Update in `netlify.toml` HUGO_VERSION to a compatible version mentioned in the Wowchemy [release notes](https://www.opensourceagenda.com/projects/wowchemy-hugo-modules/versions).
+
+5.  Change the global options to fix the Hugo version in your `.Rprofile` file.
+
+<!-- -->
+
+    options(blogdown.hugo.version = "0.89.4")
+
+`blogdown` will call Hugo, and Hugo will install the required module. This procedure will take longer than the usual launch of Hugo. Therefore I added the following lines in the `.Rprofile` file:
+
+    options(blogdown.server.timeout = 600) # standard = 30
+
+{{% callout note %}}
+Do not forget to restart RStudio after saving the `.Rprofile` file.
+{{% /callout %}}
+
+6.  Consecutively apply any breaking changes from the relevant [Wowchemy release notes](https://www.opensourceagenda.com/projects/wowchemy-hugo-modules/versions).
+
+7.  Now comes the moment of trueness. Keep your finger crossed and check if everything went smoothly: Run the blogdown server locally! If everything went fine, then celebrate! :clinking_glasses:
+
+Otherwise, read the error message and try to understand what went wrong. Try the following strategies:
+
+-   Often, it helps to RTFM again.
+-   Search the Internet for your error message.
+-   Maybe you can get help at the [Wowchemy forum](https://discord.gg/z8wNYzb)?
+-   If there is a problem with blogdown, try to get help from [RStudio Community](https://community.rstudio.com/) or [StackOverflow](https://stackoverflow.com/).
+-   Sometimes, it helps to return all changes and try it again.
+
+8.  Before deploying your site at [Netlify](https://www.netlify.com/), head over to the Netlify settings for your website and change the environment variable under `Site settings -> Build & deploy -> Environment` to the new Hugo version.
+
+<!-- -->
+
+    HUGO_VERSION 0.89.0
+
+9.  After deploying your site, check if it was successful (otherwise, click the failed build in Netlify to view the issue).
+
+[^1]: I believe that every repository has its own infrastructure: You can have several blogs with different Hugo and Wowchemy versions.
+
+[^2]: Wowchemy is the new name for the previously called Academic website, theme or builder.

@@ -20,6 +20,7 @@ interests:
   - Educational Design
   - E-Learning
   - Data Literacy Education
+  - Data Science / #rstat
   - Open Science
 
 organizations:
@@ -51,17 +52,33 @@ social:
 - icon: orcid
   icon_pack: ai
   link: "https://orcid.org/0000-0003-4526-8791"
+- icon: r-project
+  icon_pack: fab
+  link: "https://rpubs.com/pbaumgartner/"
 - icon: stack-overflow
   icon_pack: fab
   link: "https://stackoverflow.com/users/7322615/petzi"
+- icon: goodreads
+  icon_pack: fab
+  link: "https://www.goodreads.com/user/show/13270093-peter-baumgartner"
 - icon: wordpress
   icon_pack: fab
   link: "https://peter.baumgartner.name"
   display:
     header: true
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/peter-baumgartner-8879036/
+
+#####################################################
+### Icons not yet used
+#####################################################
+# - icon: osf 
+#   icon_pack: ai
+#   link: https://osf.io/utvd3/
+# - icon: linkedin
+#   icon_pack: fab
+#   link: https://www.linkedin.com/in/peter-baumgartner-8879036/
+# - icon: diigo
+#   icon_pack: "custom"
+#   link: "https://www.diigo.com/user/pbaumgartner"
 superuser: true
 ---
 

@@ -16,7 +16,7 @@ summary: In this fourth part of the tutorial I will explain a method how to brin
   Netlify, a service specialized for quickly rolling out static websites.
 image:
   placement: 2    
-  caption: "[Different phases in the process of publishing blogdown websites. Image by ALison Hill: Up & running with blogdown in 2021](https://alison.rbind.io/post/new-year-new-blogdown/)"
+  caption: "[Different phases in the process of publishing blogdown websites. Image by ALison Hill: Up & running with blogdown in 2021](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/)"
   alt_text: "Pictograms of the different phases in the process of publishing blogdown websites."
   focal_point: "Center"
   preview_only: false
@@ -26,7 +26,7 @@ image:
 
 {{% callout note %}} Update 2021-05-19: Because of breaking changes in `Hugo` and new features in `blogdown` this post is partly outdated. Starting with [blogdown version 1.0]((https://blog.rstudio.com/2021/01/18/blogdown-v1.0/)) you do not build the website always from scratch.
 
-Complement this sequence of the tutorial with reading [Up & running with blogdown in 2021](https://alison.rbind.io/post/new-year-new-blogdown/) by Allison Hill, co-author of the [blogdown book](https://bookdown.org/yihui/blogdown/). {{% /callout %}}
+Complement this sequence of the tutorial with reading [Up & running with blogdown in 2021](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/) by Allison Hill, co-author of the [blogdown book](https://bookdown.org/yihui/blogdown/). {{% /callout %}}
 
 We start this last part of the tutorial [where we have finished last time](/2017/09/08/blogdown-tutorial-part-3/#inspect-post-locally).
 

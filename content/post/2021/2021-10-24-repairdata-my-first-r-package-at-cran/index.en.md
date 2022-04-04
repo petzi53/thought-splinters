@@ -11,7 +11,7 @@ tags:
   - repair café
 subtitle: ''
 summary: ''
-authors: [Peter Baumgartner]
+authors: []
 lastmod: ''
 bibliography:
   - ../../../../static/media/references.bib

@@ -93,16 +93,6 @@ edit_page:
     post: true
     book: true
 
-
-# edit_page:
-#   repo_url: ''
-#   content_dir: ''
-#   repo_branch: main
-#   editable:
-#     page: false
-#     post: false
-#     book: false
-
 show_related:
   book: true
   page: false
@@ -177,4 +167,5 @@ cms:
   local_backend: false
 icon:
   pack:
-    ai: false
+    ai: true
+    custom: true
