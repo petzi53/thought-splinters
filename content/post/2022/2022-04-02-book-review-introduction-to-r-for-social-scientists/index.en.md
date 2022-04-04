@@ -102,8 +102,7 @@ These above weaknesses result in the deduction of one of the five stars.
 
 The second star deduction is motivated by missing teaching modern
 scientific behavior for early career researchers (ECRs). This
-shortcoming includes the prominent use of R Markdown and the use of
-collaboration and Open Science. I think that after the publication of <a
+shortcoming includes not using R Markdown and GitHub. I think that after the publication of <a
 href="https://happygitwithr.com/">Happy Git</a>, there is no excuse
 anymore to teach Git and GitHub (or similar systems) even for R
 beginners. Another big mistake is not using the open-access politics of
