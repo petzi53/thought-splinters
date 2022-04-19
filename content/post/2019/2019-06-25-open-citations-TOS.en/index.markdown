@@ -113,13 +113,13 @@ From the WoS Core Collection data set derives the Journal Impact Factor (JIF), p
 
 WoS has a tremendous impact on the behavior of researchers and their career development. To date (2019-06-24) Clarivate Analytics covers the following numbers of academic publictions[^1]
 
-| Category         | WoS Core        | WoS Platform     |
-|------------------|-----------------|------------------|
-| \# of journals   | &gt; 20,900     | &gt; 34,200      |
-| \# of records    | &gt; 73 million | &gt; 155 million |
-| Cited references | 1.4 billion     | 1.6 billion      |
+| Category         | WoS Core      | WoS Platform   |
+|------------------|---------------|----------------|
+| \# of journals   | \> 20,900     | \> 34,200      |
+| \# of records    | \> 73 million | \> 155 million |
+| Cited references | 1.4 billion   | 1.6 billion    |
 
-To put these figures into perspectives: They cover “only” between 35% (Natural Sciences) to 12% (Arts and humanities) of all journals (&gt; 62,500) as listed in [UlrichsWeb](https://ulrichsweb.serialssolutions.com) (Ulrich’s Global Serials Directory) \[@mongeon\_journal\_2016\],
+To put these figures into perspectives: They cover “only” between 35% (Natural Sciences) to 12% (Arts and humanities) of all journals (\> 62,500) as listed in [UlrichsWeb](https://ulrichsweb.serialssolutions.com) (Ulrich’s Global Serials Directory) \[@mongeon_journal_2016\],
 
 Clarivate also possesses other vital tools and services for scholarly research:
 
@@ -153,7 +153,7 @@ Elsevier has even more market power than Clarivate Analytics. It owns
 
 In contrast to WoS and Google (with [Google Scholar](https://scholar.google.com) another big player in the citation reference business): Elsevier does not only sell the usage of their database but is also the owner of a vast list of journals themselves. From the perspective of this double ownership, Elsevier’s business model is a closed circle: It includes the paid use of their database so that academics can find and cite scientific literature. The result of these citations is an increase of reputation of Elsevier’s journals through a higher Journal Impact Factor.
 
-Elsevier is infamous for his incredibly high-profit margin, which is about 35-40%. In contrast, financial institutes and banks work with 10-15%, and the much-criticized Walmart has only about 3% profit. These figures come from the excellent and free accessible documentary “Paywall: The Business of Scholarship” \[@schmitt\_paywall\_2018\]. In other posts, I will dwell more about the business model and the nasty role of Elsevier in the Open Science movement.
+Elsevier is infamous for his incredibly high-profit margin, which is about 35-40%. In contrast, financial institutes and banks work with 10-15%, and the much-criticized Walmart has only about 3% profit. These figures come from the excellent and free accessible documentary “Paywall: The Business of Scholarship” \[@schmitt_paywall_2018\]. In other posts, I will dwell more about the business model and the nasty role of Elsevier in the Open Science movement.
 
 <!--
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -169,7 +169,7 @@ However, back to the Open Citations issue regarding Elsevier: It turns out that 
 
 In this post, I have outlined the rationale and significance of the Open Citation movement. Citations reflect the structure and relationship of our scientific and cultural knowledge and deserve research in its own right. As “dwarfs standing on the shoulders of giants” (Isaac Newton and nowadays also the motto of Google), we generate our knowledge from previous discoveries. Citations are the expression of a social network of interconnected links which itself are due to scientific research. Much can be learned of this interplay of different researchers, subject areas, and language communities through different times and regions.
 
-I have also argued that the economic interests of two key players in the research business are obstacles to overcome for a higher rate of Open Citations. Clarivate Analytics form together with Elsevier a duopoly and maybe with Google even a tripoly \[@schoolworkhelper\_business\_2018\]: Because of the competition between two or three sellers they cannot work like a monopoly and dictate without consideration their market condition. However, they can work in a kind competition-cooperation relationship; an economic framework called the coopetition paradox \[@raza-ullah\_coopetition\_2014\].
+I have also argued that the economic interests of two key players in the research business are obstacles to overcome for a higher rate of Open Citations. Clarivate Analytics form together with Elsevier a duopoly and maybe with Google even a tripoly \[@schoolworkhelper_business_2018\]: Because of the competition between two or three sellers they cannot work like a monopoly and dictate without consideration their market condition. However, they can work in a kind competition-cooperation relationship; an economic framework called the coopetition paradox \[@raza-ullah_coopetition_2014\].
 
 Add relevant links to the subject of Open Citation on my [Wakelet page](https://wakelet.com/@PeterBaumgartner).
 

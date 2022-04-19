@@ -31,7 +31,6 @@ output:
     toc_depth: 4
 ---
 
-<script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
@@ -94,7 +93,7 @@ output:
 </ul>
 <div id="example" class="section level3">
 <h3>Example</h3>
-<div class="figure" style="text-align: center"><span id="fig:img-with-knitr"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-with-knitr"></span>
 <img src="images/my-image.png" alt="Alternative text for figure 1" width="50%" />
 <p class="caption">
 Figure 1: Caption for figure 1
@@ -154,7 +153,7 @@ p.caption {
 <li><strong>Tooltip</strong>: no</li>
 <li><strong>Width/Height</strong>: yes</li>
 <li><strong>Link to</strong>: no</li>
-<li><strong>ID</strong>: yes (format: "fig:&lt;chunk name&gt;)</li>
+<li><strong>ID</strong>: yes (format: “fig:&lt;chunk name&gt;)</li>
 <li><strong>Classes</strong>: yes (with <code>out.extra</code>, example: <code>out.extra='class="border shadowed"'</code></li>
 <li><strong>CSS style</strong>: yes (with out.extra, example: <code>out.extra='style="background-color: #9ecff7; padding:10px; display: inline-block;"'</code> See blog post <a href="http://zevross.com/blog/2017/06/19/tips-and-tricks-for-working-with-images-and-figures-in-r-markdown-documents/">Tips and tricks for working with images and figures in R Markdown documents</a></li>
 <li><strong>Other</strong> (key=value): no</li>
@@ -235,14 +234,14 @@ p.caption {
 <div id="example-2" class="section level3">
 <h3>Example</h3>
 <div class="figure">
-<img src="images/my-image.png" title="title text and tooltip" id="figure3" alt="here comes a description for blind people, screen readers and search engines" alt="" />
+<img src="images/my-image.png" title="title text and tooltip" id="figure3" alt="here comes a description for blind people, screen readers and search engines" />
 <p class="caption">Figure 3: Caption for this figure</p>
 </div>
 <p>Even in this enhanced window is the wrong mixture of ‘Caption’ and ‘Alt’ attributes offered. But there is a work around with the ‘Other’-field as I have shown in the screenshot.</p>
 <p>{{% callout note %}} Fill in the field “Caption/Alt” <strong>and</strong> add the <code>alt</code> attribute in the field “Others”. After the conversion to HTML the former constitutes the caption and the later the alternative text. {{% /callout %}}</p>
 <p>If you click on the inserted image and call the window again, then a slightly different window appears where fields for width and height are added and can be changed. This addition appears under the image as well by just clicking on the image.</p>
 <div class="figure">
-<img src="images/width-height-fields-after-image-inclusion-min.png" id="width-height-added" alt="Width and height field added after the image was included into the .Rmd page. Left: changed window, right: after click into the inserted window." alt="" />
+<img src="images/width-height-fields-after-image-inclusion-min.png" id="width-height-added" alt="Width and height field added after the image was included into the .Rmd page. Left: changed window, right: after click into the inserted window." />
 <p class="caption">Width and height field added after the image was included into the .Rmd page</p>
 </div>
 </div>
@@ -372,91 +371,91 @@ p.caption {
 <tr class="odd">
 <td>Caption</td>
 <td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td></td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center">| ✅</td>
+<td>|</td>
 </tr>
 <tr class="even">
 <td>C. format</td>
 <td align="center">❌ <sup>2</sup></td>
-<td align="center">✅</td>
-<td align="center">❌</td>
-<td align="center">❌ <sup>2</sup></td>
-<td><sup>2</sup> standard = bold</td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center">| ❌ ^</td>
+<td>2^ | <sup>2</sup> standard = bold</td>
 </tr>
 <tr class="odd">
 <td>C.numbered</td>
 <td align="center">✅</td>
-<td align="center">❌</td>
-<td align="center">❌</td>
-<td align="center">✅ <sup>3</sup></td>
-<td><sup>3</sup> via ‘Academic’ theme</td>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center">| ✅ ^</td>
+<td>3^ | <sup>3</sup> via ‘Academic’ theme</td>
 </tr>
 <tr class="even">
 <td>Alt</td>
 <td align="center">✅</td>
-<td align="center">❌</td>
-<td align="center">✅ <sup>4</sup></td>
-<td align="center">✅</td>
-<td><sup>4</sup> via ‘Other’-field</td>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center"><div class="line-block">✅ <sup>4</sup></div></td>
+<td align="center">| ✅</td>
+<td>| <sup>4</sup> via ‘Other’-field</td>
 </tr>
 <tr class="odd">
 <td>Title</td>
 <td align="center">❌</td>
-<td align="center">❌</td>
-<td align="center">✅</td>
-<td align="center">❌</td>
-<td></td>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center">| ❌</td>
+<td>|</td>
 </tr>
 <tr class="even">
 <td>Tooltip</td>
 <td align="center">❌</td>
-<td align="center">❌</td>
-<td align="center">✅</td>
-<td align="center">❌</td>
-<td></td>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center">| ❌</td>
+<td>|</td>
 </tr>
 <tr class="odd">
 <td>Width/Height</td>
 <td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td></td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center">| ✅</td>
+<td>|</td>
 </tr>
 <tr class="even">
 <td>Link to</td>
 <td align="center">❌</td>
-<td align="center">❌</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td></td>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center">| ✅</td>
+<td>|</td>
 </tr>
 <tr class="odd">
 <td>ID</td>
 <td align="center">✅ <sup>5</sup></td>
-<td align="center">❌</td>
-<td align="center">✅</td>
-<td align="center">✅ <sup>6</sup></td>
-<td><p><sup>5</sup> <code>fig:&lt;chunk name&gt;</code></p>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center">| ✅ ^</td>
+<td><p>6^ | <sup>5</sup> <code>fig:&lt;chunk name&gt;</code></p>
 <p><sup>6</sup> <code>figure-&lt;caption text&gt;</code> or ‘Academic’ theme</p></td>
 </tr>
 <tr class="even">
 <td>CSS</td>
 <td align="center">✅</td>
-<td align="center">❌</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td></td>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center"><div class="line-block">✅</div></td>
+<td align="center">| ✅</td>
+<td>|</td>
 </tr>
 <tr class="odd">
 <td>Other</td>
 <td align="center">❌<sup>1</sup></td>
-<td align="center">❌</td>
-<td align="center">✅ <sup>7</sup></td>
-<td align="center">✅ <sup>8</sup></td>
-<td><p><sup>1</sup>via output chunk arbitrary HTML code!</p>
+<td align="center"><div class="line-block">❌</div></td>
+<td align="center"><div class="line-block">✅ <sup>7</sup></div></td>
+<td align="center">| ✅ ^</td>
+<td><p>8^ | <sup>1</sup>via output chunk arbitrary HTML code!</p>
 <p><sup>7</sup> free choice!</p>
 <p><sup>8</sup> <code>target</code>, <code>rel</code>, <code>attr</code>, <code>attrlink</code></p></td>
 </tr>
@@ -472,7 +471,7 @@ p.caption {
 <p>But let’s see what the other file format are producing. For people using different methods<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> for their posts perhaps the comparison inside one file format is not sufficient. Perhaps there is a method not ideal when considered only one file format but has a higher consistency when looked all file format together.</p>
 <span class='Z3988' title='url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=blogPost&amp;rft.title=Images:%20From%20R%20Markdown%20to%20HTML%20format&amp;rft.source=Thought%20splinters&amp;rft.rights=CC%20BY-SA%204.0&amp;rft.description=The%20post%20investigates%20different%20methods%20to%20include%20images%20in%20%60.Rmd%60%20files%20and%20how%20they%20are%20treated%20in%20the%20%60blogdown%60%20conversion%20process%20to%20HTML.&amp;rft.identifier=https%3A%2F%2Fnotes.peter-baumgartner.net%2F2021%2F05%2F05%2Fimages-from-rmd-to-html-format&amp;rft.aufirst=Peter&amp;rft.aulast=Baumgartner&amp;rft.au=Peter%20Baumgartner&amp;rft.date=2021-05-05&amp;rft.language=en'></span> 
 </div>
-<div class="footnotes">
+<div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
 <li id="fn1"><p>Helper functions to write Hugo shortcodes using the R syntax<a href="#fnref1" class="footnote-back">↩︎</a></p></li>

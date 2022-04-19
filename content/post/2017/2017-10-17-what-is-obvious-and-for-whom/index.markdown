@@ -25,7 +25,7 @@ image:
     preview_only: false
 ---
 
-In the last few weeks, I tried to work with [bookdown](https://bookdown.org/yihui/bookdown/), an R package developed by Yihui Xie. This program is/was for me much harder to understand, unlike [blogdown](https://bookdown.org/yihui/blogdown/) by the same author. In blogdown, I could even – after some initial problems – write a tutorial which even [the developer applauded](https://yihui.name/en/2017/10/bloggers-vs-book-authors/) :sweat\_smile:.
+In the last few weeks, I tried to work with [bookdown](https://bookdown.org/yihui/bookdown/), an R package developed by Yihui Xie. This program is/was for me much harder to understand, unlike [blogdown](https://bookdown.org/yihui/blogdown/) by the same author. In blogdown, I could even – after some initial problems – write a tutorial which even [the developer applauded](https://yihui.name/en/2017/10/bloggers-vs-book-authors/) :sweat_smile:.
 
 But with bookdown, it was different: Not only that I misunderstood some program functions but more importantly, I could not adequately report my problems in one case, [I did not communicate vital information](https://github.com/rstudio/bookdown/issues/474) in the other case [I did not look at the right place](https://stackoverflow.com/questions/46742700/is-it-possible-to-change-to-documentclass-scrbook-in-bookdown) where my question was explicitly addressed. It is not a surprise that Yihui Xie got angry with me and even wrote a [blog post about the incident](https://yihui.name/en/2017/10/not-obvious/). He gave me the advice:
 
@@ -49,7 +49,7 @@ But again: This is a typical situation we have in education as well. We are expl
 
 So what? Are people dumb? Do they deliberately ignore advice? I don’t think so, but instead, there is a gap which cannot be overcome only with linguistic means. It is also a question of transferring *tacit knowledge’* to use a notion introduced by Michael Polanyi:
 
-> I shall reconsider human knowledge by starting from the fact that {{&lt; hl &gt;}}we know more than we can tell{{&lt; /hl &gt;}}.(Polanyi 2009)
+> I shall reconsider human knowledge by starting from the fact that {{\< hl \>}}we know more than we can tell{{\< /hl \>}}.(Polanyi 2009)
 
 Many philosophers (e.g., Søren Kirkegaard, Ludwig Wittgenstein, Gregory Bateson, Susan Langer, Jürgen Habermas, Nelson Goodman, to name a few) have reflected about the limitation of linguistic expressions. Wittgenstein, for example, has pointed out that we cannot explain the meaning of every word or sentence because we have to use language with other words and sentences. It is an endless regress that we cannot solve with language alone. We have to share a common ground, and we have to know how “to play the language game.” Following some quotes to give you a flavor of the argument:
 
@@ -117,7 +117,7 @@ So what the fuss with all these abstract ideas? Where is the practical impact of
 
 There is no possibility to examine all belief systems at the same time. The whole book “On Certainty” by Ludwig Wittgenstein Wittgenstein (1975) is full of aphorisms about tacit assumptions we rely on. Our knowledge does not consist of separated propositions but is a system of interconnected views/opinions. I will close this post with some quotes by Wittgenstein to illustrate this point.
 
-> §139. Not only rules, but also examples are needed for establishing a practice. Our rules leave loop-holes open, and the practice has to speak for itself."
+> §139. Not only rules, but also examples are needed for establishing a practice. Our rules leave loop-holes open, and the practice has to speak for itself.”
 
 > §142. It is not single axioms that strike me as obvious, it is a system in which consequences and premises give one another *mutual* support.
 

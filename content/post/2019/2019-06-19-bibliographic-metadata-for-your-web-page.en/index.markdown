@@ -53,7 +53,7 @@ With *Web 2.0*, we see a radical change in scholarly communication. On the one h
 
 Especially for young researchers (so-called Early Career Researchers, or ECRs[^1] is this situation alarming and even existence-threatening. The find themselves in a double-bind: Should they more invest in traditional ways of career planning, or is it more promising to expand and foster their internet presence? I do not have a clear solution for myself. I think a transition period, the most secure strategy is to follow both paths.
 
-> ECRs have both the most to gain and the most to lose from being at the forefront of changes to scholarly communications \[@eve\_open\_2014; @st.\_louis\_open\_2015\].
+> ECRs have both the most to gain and the most to lose from being at the forefront of changes to scholarly communications \[@eve_open_2014; @st.\_louis_open_2015\].
 
 ## COinS and Zotero
 
