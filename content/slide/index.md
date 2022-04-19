@@ -11,7 +11,8 @@ allow_comments: false
 
 | Date       | Name                                                                                                             |
 |------------|------------------------------------------------------------------------------------------------------------------|
-| 2021-05-11 | [Example slide show](/slides/2021-05-11-example-wowchemy) by Wowchemy                                            |
+| 2021-05-19 | [Installing R & RStudio](/slides/2022-04-19-installing-r-and-rstudio)        
+| 2021-05-18 | [Example slide show](/slides/2022-04-18-demo-slides)                                                             |
 | 2019-07-21 | How to [use Wayback Machine](/slides/2019-07-21-wayback-machine-tutorial/) to Archive and Retrieve Web Resources |
 | 2018-01-07 | [LaTeX Installation](/slides/2018-01-07-installiere-latex) (in Deutsch)                                          |
 | 2018-01-03 | [RStudio Installation](/slides/2018-01-03-installiere-rstudio) (in Deutsch)                                      |
