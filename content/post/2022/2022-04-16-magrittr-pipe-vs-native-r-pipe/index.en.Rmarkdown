@@ -1,0 +1,72 @@
+---
+title: magrittr Pipe vs Native R Pipe
+author: Peter Baumgartner
+date: '2022-04-16'
+slug: magrittr-pipe-vs-native-r-pipe
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: ''
+bibliography:
+  - ../../../../static/media/references.bib
+featured: no
+commentable: yes
+side_toc: yes
+draft: yes
+image:
+  placement: 2
+  caption: ''
+  alt_text: ''
+  focal_point: Center
+  preview_only: no
+---
+
+# Introduction 
+
+
+After some practice, I got familiarized with the {magrittr} r pipe. It is a way to chain commands following each other. 
+
+## Resources
+
+- https://www.rstudio.com/blog/rstudio-v1-4-update-whats-new/
+
+```{r}
+library(tidyverse)
+iris %>%
+  as_tibble %>%
+  select(Sepal.Length, Species) %>%
+  summary
+
+
+```
+
+```{r}
+my_iris <- as_tibble(iris)
+my_iris2 <-  select(my_iris, c(Sepal.Length, Species))
+my_iris3 <- arrange(my_iris2, desc(Sepal.Length))
+my_iris3
+```
+
+```{r}
+as_tibble(select(arrange(iris, desc(Sepal.Length)), c(Sepal.Length, Species)))
+```
+
+```{r}
+iris |> 
+  as_tibble()  |> 
+  select(Sepal.Length, Species)  |>
+  arrange(desc(Sepal.Length))
+```
+
+```{r eval=FALSE}
+# generates error!
+# Error in parse(text = x, srcfile = src) : 
+#   '=>' is disabled; set '_R_USE_PIPEBIND_' envvar to a true value to enable it
+Sys.setenv(`_R_USE_PIPEBIND_` = TRUE) 
+
+mtcars |> 
+   . => lm(mpg ~ disp, data = .)
+```
+
