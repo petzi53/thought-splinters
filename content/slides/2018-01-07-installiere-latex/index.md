@@ -1,18 +1,15 @@
 ---
-title: LaTeX installieren (Deutsch)
-author: Peter Baumgartner
+title: "LaTeX installieren (Deutsch)"
+author: "Peter Baumgartner"
 date: '2018-01-07'
 categories:
-  - how-to
-  - german
+- how-to
+- german
 tags:
-  - latex
-  - installation
+- latex
+- installation
 slides:
-  # Choose a theme from https://github.com/hakimel/reveal.js#theming
-  theme: black  
-  # Choose a code highlighting style (if highlighting enabled in `params.toml`)
-  #   Light style: github. Dark style: dracula (default).
+  theme: black
   highlight_style: dracula
 summary: Tutorial zum Installieren des LaTeX Textsystems für Mac und Windows
 ---
@@ -21,11 +18,12 @@ summary: Tutorial zum Installieren des LaTeX Textsystems für Mac und Windows
 
 Bedienung dieser Diashow
 
-- Steuerungselemente: Pfeile rechts unten
-- **Achtung:** Manchmal gibt es außer vor und zurück auch hinauf und hinunter
+- Steuerungselemente: 
+  - Pfeile rechts unten und 
+  - <i class="fa fa-bars"></i> Menü unten links
 - Folienstruktur-Überblick: ESC-Taste
 - Zoomen: ALT + (STRG für LINUX) KLICK in das Objekt. Noch ein Klick: Herauszoomen.
-- Beenden: Mit dem Browser zurück gehen
+- Beenden: Mit dem Browser zurück gehen (nicht mit Pfeil rechts unten)
 
 ---
 
@@ -41,50 +39,72 @@ Alle Programme sind [Open Source](http://praxistipps.chip.de/open-source-was-ist
 
 ---
 
+
+<section data-markdown>
+  <textarea data-template>
+  ## LaTeX-Installation für Mac (1)
+    <img src="images/1-1_MacOS-Startpage-min.png" style="width: 45%" />.
+    ---
+    ## LaTeX-Installation für Mac (2)
+    <img src="images/1-2_MacOS-Distribution-min.png" style="width: 60%" />
+    ---
+    ## LaTeX-Installation für Mac (3)
+    <img src="images/1-3_MacOS-Download-min.png" style="width: 60%" />
+  </textarea>
+</section>
+
+---
+
+- For Mac press down keys
+- For Windows press right key
+
+<section data-markdown>
+  <textarea data-template>
+    ## LaTeX-Installation für Mac (1)
+    <img src="images/1-1_MacOS-Startpage-min.png" style="width: 45%" />.
+    ---
+    ## LaTeX-Installation für Mac (2)
+    <img src="images/1-2_MacOS-Distribution-min.png" style="width: 60%" />
+    ---
+    ## LaTeX-Installation für Mac (3)
+    <img src="images/1-3_MacOS-Download-min.png" style="width: 60%" />
+  </textarea>
+
+</section>
+
 ## LaTeX-Installation für Mac (1)
 
-Windows: Pfeil rechts unten nach rechts!
-
-Mac: Weiter mit Pfeil nach unten!
-
-<img src="/img/latex-installation-deutsch/1-1_MacOS-Startpage-min.png" style="width: 45%" />
+<img src="images/1-1_MacOS-Startpage-min.png" style="width: 45%" />
 
 ___
 
 ## LaTeX-Installation für Mac (2)
 
-<img src="/img/latex-installation-deutsch/1-2_MacOS-Distribution-min.png" style="width: 60%" />
+<img src="images/1-2_MacOS-Distribution-min.png" style="width: 60%" />
 
 ___
 
 ## LaTeX-Installation für Mac (3)
 
-<img src="/img/latex-installation-deutsch/1-3_MacOS-Download-min.png" style="width: 60%" />
-
-___
-
-## Präsentation beenden
-
-- Sie beenden nun diese Präsentation mit (**Browser** Pfeil rückwärts)
-- ACHTUNG: Browser rückwärts -- und nicht Folien Pfeil links!
+<img src="images/1-3_MacOS-Download-min.png" style="width: 60%" />
 
 ---
 
 ## LaTeX-Installation für Windows (1)
 
-<img src="/img/latex-installation-deutsch/2-1_Windows-Startpage-min.png" style="width: 55%" />
+<img src="images/2-1_Windows-Startpage-min.png" style="width: 45%" />
 
 ___
 
 ## LaTeX-Installation für Windows (2)
 
-<img src="/img/latex-installation-deutsch/2-2_Windows-TexLive-Distribution-min.png" style="width: 60%" />
+<img src="images/2-2_Windows-TexLive-Distribution-min.png" style="width: 60%" />
 
 ___
 
 ## LaTeX-Installation für Windows (3)
 
-<img src="/img/latex-installation-deutsch/2-3_Windows-Download-min.png" style="width: 60%" />
+<img src="images/2-3_Windows-Download-min.png" style="width: 60%" />
 
 
 ___

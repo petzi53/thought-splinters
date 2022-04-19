@@ -1,20 +1,17 @@
 ---
-title: Install Blogdown (Part 1)
-author: Peter Baumgartner
+title: "Install Blogdown (Part 1)"
+author: "Peter Baumgartner"
 date: '2017-09-19'
 categories:
-  - how-to
-  - slide
+- how-to
+- slide
 tags:
-  - blogdown
-  - hugo
-  - installation
+- blogdown
+- hugo
+- installation
 summary: How to install Hugo with a specified theme using R, RStudio and blogdown
 slides:
-  # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: black
-  # Choose a code highlighting style (if highlighting enabled in `params.toml`)
-  #   Light style: github. Dark style: dracula (default).
   highlight_style: dracula
 ---
 
