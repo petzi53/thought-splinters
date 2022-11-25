@@ -39,6 +39,8 @@ social:
 - icon: mastodon
   icon_pack: fab
   link: https://social.anoxinon.de/@pbaumgartner
+  display:
+    header: yes
 - icon: github
   icon_pack: fab
   link: https://github.com/petzi53/blogdown
